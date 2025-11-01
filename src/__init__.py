@@ -22,6 +22,10 @@ from .notebook_utils import (
     format_key_preview,
     configure_noise_slider,
     bind_controls,
+    setup_part1,
+    setup_part2,
+    setup_part3,
+    setup_part4,
 )
 
 __all__ = [
@@ -52,4 +56,8 @@ __all__ = [
     "format_key_preview",
     "configure_noise_slider",
     "bind_controls",
+    "setup_part1",
+    "setup_part2",
+    "setup_part3",
+    "setup_part4",
 ]
