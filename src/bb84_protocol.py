@@ -207,7 +207,7 @@ class BB84Protocol:
     def _build_backend(self, noise_model: Optional[NoiseModel] = None) -> AerSimulator:
         backend = AerSimulator(method="density_matrix", noise_model=noise_model)
         if self.params.seed is not None:
-            backend.set_options(seed_simulator=self.params.seed, seed_transpiler=self.params.seed)
+            backend.set_options(seed_simulator=self.params.seed)
         return backend
 
     def _build_measurement_circuit(self, bit: int, preparation_basis: str, measurement_basis: str) -> QuantumCircuit:
