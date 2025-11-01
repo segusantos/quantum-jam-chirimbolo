@@ -1,7 +1,7 @@
 [project]
-name = "quantum-jam-chirimbolo"
+name = "quantum_jam"
 version = "0.1.0"
-description = "Add your description here"
+description = "BB84 Quantum Key Distribution Protocol Simulation using Qiskit"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
