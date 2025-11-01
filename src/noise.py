@@ -59,11 +59,11 @@ class NoiseModelFactory:
 
         if name == "bit_flip":
             probability = _clamp(params.get("p", 0.0))
-            return errors.pauli_error([(probability, "X"), (1 - probability, "I")])
+            return errors.pauli_error([("X", probability), ("I", 1 - probability)])
 
         if name == "phase_flip":
             probability = _clamp(params.get("p", 0.0))
-            return errors.pauli_error([(probability, "Z"), (1 - probability, "I")])
+            return errors.pauli_error([("Z", probability), ("I", 1 - probability)])
 
         if name == "phase_damping":
             lam = _clamp(params.get("lambda", 0.0))

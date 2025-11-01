@@ -1,19 +1,55 @@
-"""Core building blocks for the BB84 quantum key distribution demo."""
+"""BB84 Quantum Key Distribution Protocol Implementation."""
 
 from .bb84_protocol import BB84Protocol, BB84Parameters, BB84RunResult, BB84Event
 from .noise import NoiseChannel, NoiseModelFactory
 from .error_correction import CascadeErrorCorrector, CascadeResult
 from .privacy import PrivacyAmplifier, PrivacyAmplificationResult
+from .notebook_utils import (
+    NOISE_PRESETS,
+    clamp,
+    normalize_seed,
+    build_noise_channel,
+    run_bb84,
+    style_result_table,
+    lerp_color,
+    color_to_hex,
+    detection_badge,
+    key_summary,
+    detection_summary,
+    split_after_detection,
+    sweep_noise,
+    render_noise_curves,
+    format_key_preview,
+    configure_noise_slider,
+    bind_controls,
+)
 
 __all__ = [
-	"BB84Protocol",
-	"BB84Parameters",
-	"BB84RunResult",
-	"BB84Event",
-	"NoiseChannel",
-	"NoiseModelFactory",
-	"CascadeErrorCorrector",
-	"CascadeResult",
-	"PrivacyAmplifier",
-	"PrivacyAmplificationResult",
+    "BB84Protocol",
+    "BB84Parameters",
+    "BB84RunResult",
+    "BB84Event",
+    "NoiseChannel",
+    "NoiseModelFactory",
+    "CascadeErrorCorrector",
+    "CascadeResult",
+    "PrivacyAmplifier",
+    "PrivacyAmplificationResult",
+    "NOISE_PRESETS",
+    "clamp",
+    "normalize_seed",
+    "build_noise_channel",
+    "run_bb84",
+    "style_result_table",
+    "lerp_color",
+    "color_to_hex",
+    "detection_badge",
+    "key_summary",
+    "detection_summary",
+    "split_after_detection",
+    "sweep_noise",
+    "render_noise_curves",
+    "format_key_preview",
+    "configure_noise_slider",
+    "bind_controls",
 ]
